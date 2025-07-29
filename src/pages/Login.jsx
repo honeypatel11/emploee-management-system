@@ -37,7 +37,7 @@ const Login = ({ setIsLoggedIn }) => {
     }, []);
 
     return (
-        <section className="min-h-screen flex items-center justify-center bg-gradient-to-r from-teal-50 to-teal-100 px-4">
+        <section className="min-h-screen flex items-center justify-center bg-gradient-to-r from-teal-700 to-teal-700 px-4">
             <div className="w-full max-w-md bg-white border border-teal-200 rounded-xl shadow-lg p-8 sm:p-10">
                 <h2 className="text-2xl sm:text-3xl font-bold text-teal-700 mb-6 text-center">
                     Let’s Get You Logged In

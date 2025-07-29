@@ -41,7 +41,7 @@ const Editemployee = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-100 via-cyan-100 to-teal-100 px-4 sm:px-6 lg:px-8 py-8">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-teal-600 via-teal-400 to-teal-600 px-4 sm:px-6 lg:px-8 py-8">
             <div className="bg-white/80 backdrop-blur-md shadow-xl rounded-2xl w-full max-w-3xl p-6 sm:p-8">
                 <h2 className="text-2xl sm:text-4xl font-bold text-center text-teal-800 mb-6 sm:mb-8">
                     Edit Employee
@@ -91,10 +91,10 @@ const Editemployee = () => {
                                 className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-sm"
                             >
                                 <option value="">Choose a Department</option>
-                                <option value="1">Designing</option>
-                                <option value="2">Development</option>
-                                <option value="3">Finance</option>
-                                <option value="4">Sales And Marketing</option>
+                                <option value="Designing">Designing</option>
+                                <option value="Development">Development</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Sales And Marketing">Sales And Marketing</option>
                             </select>
                         </div>
 

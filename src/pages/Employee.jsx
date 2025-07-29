@@ -15,8 +15,14 @@ const Employees = () => {
         setSearchEmp(data);
     }, []);
 
+     useEffect(() => {
+        filterEmployees(search);
+        
+    }, [search, searchEmp]);
+    
+
     const employeeDelete = (id) => {
-        const updatedEmployee = employees.filter((emp) => emp.id !== id);
+        const updatedEmployee = searchEmp.filter((emp) => emp.id !== id);
         setEmployees(updatedEmployee);
         setSearchEmp(updatedEmployee);
         localStorage.setItem("employees", JSON.stringify(updatedEmployee));
@@ -24,42 +30,41 @@ const Employees = () => {
     };
 
     const handleChange = (e) => {
-        const updatedSearch = { ...search, [e.target.id]: e.target.value };
-        setSearch(updatedSearch);
-        filterEmployees(updatedSearch);
+        setSearch({ ...search, [e.target.id]: e.target.value });
     };
 
     const handleSearch = (e) => {
         const updatedSearch = { ...search, [e.target.id]: e.target.value };
         setSearch(updatedSearch);
-        filterEmployees(updatedSearch);
+        
     };
 
-    const filterEmployees = ({ name, department }) => {
-        let filtered = searchEmp;
-
+    const filterEmployees = ({name, department}) => {
+        let filtered = [...searchEmp];
+        
         if (department.trim() !== "") {
-            filtered = filtered.filter(emp => emp.department === department);
+            filtered = filtered.filter(emp =>emp.department===department);
+            
+            
+           
         }
 
         if (name.trim() !== "") {
-            filtered = filtered.filter(emp =>
+          filtered = filtered.filter(emp =>
                 emp.name.toLowerCase().includes(name.toLowerCase())
             );
+            
         }
-
         setEmployees(filtered);
+        
+       
     };
 
-    const clearFilters = () => {
-        setSearch({ name: "", department: "" });
-        setEmployees(searchEmp);
-    };
 
     return (
         <section className="pt-[93px] bg-[#f9fafb] min-h-screen">
             <div className="container mx-auto px-4">
-               
+
                 <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-6">
                     <h2 className="text-2xl sm:text-3xl font-semibold">Employees Details</h2>
 
@@ -89,12 +94,12 @@ const Employees = () => {
                         <button
                             type="button"
                             onClick={() => navigate("/add-employee")}
-                            className="text-white bg-teal-600 hover:bg-teal-700 font-medium rounded-md text-sm px-5 py-2 flex items-center gap-2 transition"
+                            className="w-full text-white bg-teal-700 hover:bg-teal-700 font-medium rounded-md text-sm px-3 py-2 flex items-center gap-2 transition"
                         >
-                         Add Employee
+                            Add Employee
                         </button>
 
-                        
+
                     </div>
                 </div>
 
