@@ -41,7 +41,7 @@ const Editemployee = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-teal-600 via-teal-400 to-teal-600 px-4 sm:px-6 lg:px-8 py-8">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-teal-600 to-teal-600 px-4 sm:px-6 lg:px-8 py-8">
             <div className="bg-white/80 backdrop-blur-md shadow-xl rounded-2xl w-full max-w-3xl p-6 sm:p-8">
                 <h2 className="text-2xl sm:text-4xl font-bold text-center text-teal-800 mb-6 sm:mb-8">
                     Edit Employee
