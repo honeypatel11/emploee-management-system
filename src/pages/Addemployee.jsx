@@ -41,7 +41,7 @@ const AddEmployee = () => {
                                 id="name"
                                 placeholder="John"
                                 required
-                                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 shadow-sm"
+                                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-600 shadow-sm"
                             />
                         </div>
                         <div>

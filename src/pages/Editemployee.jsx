@@ -46,7 +46,6 @@ const Editemployee = () => {
                 <h2 className="text-2xl sm:text-4xl font-bold text-center text-teal-800 mb-6 sm:mb-8">
                     Edit Employee
                 </h2>
-
                 <form onSubmit={handleUpdate}>
                     <div className="grid gap-6 sm:grid-cols-2">
                         <div>
